@@ -70,8 +70,16 @@
         <div class="input-group mb-3">
             <input type="text" id="wordInput" class="form-control" placeholder="Введите слово...">
             <div class="input-group-append">
-                <button id="searchButton" class="btn btn-primary" onclick="getSynonyms()">Поиск синонимов</button>
+                <button id="searchButton" class="btn btn-primary" onclick="getSynonyms()">Поиск</button>
             </div>
+        </div>
+        <div id="welcomeText" class="container">            
+            <p><strong>Синонимы</strong> - это слова, имеющие схожее или близкое значение. Они позволяют разнообразить текст и избежать повторений, делая речь более разнообразной и выразительной.</p>
+            <p>Этот инструмент поможет вам находить синонимы для различных слов на русском языке.</p>
+            <p>Для начала введите слово в поле выше и нажмите кнопку "Поиск", чтобы найти синонимы к нему.</p>
+            <p>Если вы хотите расширить свой словарный запас или просто ищете подходящее выражение, то это место для вас!</p>
+            <p>Если же вы нашли новое слово, которого нет в нашей базе данных, не стесняйтесь добавить его, используя кнопку "Сохранить слово".</p>
+            <p>Желаем вам приятного и продуктивного использования!</p>
         </div>
         <div id="loadingSpinner" style="display: none;">
             <i class="fa-solid fa-spinner"></i>
@@ -108,6 +116,8 @@
 
             document.getElementById("addWordButton").style.display = "inline-block";
             document.getElementById("databaseButton").style.display = "inline-block";
+            const welcomeText = document.getElementById("welcomeText");
+            welcomeText.style.display = "none";
             loadingSpinner.style.display = "none"; 
 
         }
